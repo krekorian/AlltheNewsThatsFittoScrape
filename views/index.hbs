@@ -1,0 +1,15 @@
+<h1>Articles</h1>
+
+<h3>List of articles</h3>
+
+<ul>
+    {{#each listarticle}}
+    <li>
+        <p id="headline{{@index}}" {{@index}}>Headline: {{this.Headline}}</p>
+        <p id="summary{{@index}}">Summary: {{this.Summary}}</p>
+        <p id="id{{@index}}">ID: {{@index}}</p>
+        <a href="https://{{this.URL}}" target="_blank" id="url{{@index}}">Link</a>
+        <button id="savearticlebtn" data={{@index}} type="button" style="margin-left:50px">Save article</button>
+    </li>
+    {{/each}}
+</ul>
